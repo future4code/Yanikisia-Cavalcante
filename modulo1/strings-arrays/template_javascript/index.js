@@ -109,6 +109,7 @@ let comidasPreferidas= ["lasanha","açai","cuscuz","banoffee","chocolate"]
 
 //console.log(fraseDividida)
 
-// let frutaArray=["Banana","Morango","Abacaxi","Laranja","Ameixa"]
-// frutaArray.includes("Abacaxi")
-// console.log(`O indice da palavra 'Abacaxi' é: ${frutaArray.indexOf("Abacaxi")}, e o tamanho do array é: ${frutaArray.length})
+ let frutaArray=["Banana","Morango","Abacaxi","Laranja","Ameixa"]
+ frutaArray.includes("Abacaxi")
+ frutaArray.indexOf("Abacaxi")
+ console.log(`O indice do abacaxi é: ${frutaArray.indexOf("Abacaxi")} esse é o indice do array ${frutaArray.length} `)
