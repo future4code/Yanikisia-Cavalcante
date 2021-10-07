@@ -29,9 +29,10 @@ b. Determine qual será a saída no console para cada uma das 3 entradas do usu�
 //     console.log("Eu sou yanikisia, tenho 21 anos, moro em macapá, e sou estudante.")
 // }
 // mostarInformacoes()
-/*b)
+/*b)*/
 const mostarInformacoes=(nome,idade,endereco,profissao)=>{
-    console.log(`Eu sou ${nome}, eu tenho ${idade}, eu moro em  ${endereco}, e sou ${profissao} `)
+    const fraseFinal=console.log(`Eu sou ${nome}, eu tenho ${idade}, eu moro em  ${endereco}, e sou ${profissao} `)
+    return fraseFinal
 }
 const nomeUsuario=prompt("Qual seu nome?")
 const idadeUSuario=prompt("Qual sua idade?")
@@ -39,7 +40,7 @@ const enderecoUsuario=prompt("Em qual cidade voce mora?")
 const profissaoUsuario=prompt("Qual sua profissão?")
  mostarInformacoes(nomeUsuario,idadeUSuario,enderecoUsuario,profissaoUsuario)
 
- */
+ 
 /**2-
  * a) Escreva uma função que receba 2 números como parâmetros, e, dentro da função,
  *  faça a soma das duas entradas e retorne o resultado. Invoque a função e imprima no console o resultado.
@@ -148,10 +149,10 @@ somar(2,4)
  * Faça uma função que execute o teorema de Pitágoras, recebendo dois catetos e 
  * calculando o valor da hipotenusa. Retorne este valor, invoque a função e imprima o resultado no console. 
  */
-function fazerTeorema(num1,num2){
-    let hipotenusa=(num1*num1)+(num2*num2)
-    const resultado=hipotenusa**(1/2)
- return resultado
-}
-const teoremaResolvido=fazerTeorema(23,12)
-console.log("A hipotenusa vale:",teoremaResolvido)
+// function fazerTeorema(num1,num2){
+//     let hipotenusa=(num1*num1)+(num2*num2)
+//     const resultado=hipotenusa**(1/2)
+//  return resultado
+// }
+// const teoremaResolvido=fazerTeorema(1,1)
+// console.log("A hipotenusa vale:",teoremaResolvido)
