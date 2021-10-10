@@ -118,7 +118,7 @@ function checaRenovacaoRG() {
   let renovação 
   const idade=(Number(anoAtual)-Number(anoNascimento))
   const carteira = (Number(anoAtual)-Number(anoCarteira))
-  renovação=((((idade>18) && (idade<=20)) && (carteira>=5)) || (((idade>20) && (idade<=50)) && (carteira>=10)) || (((idade>50)) && (carteira>=15)))
+  renovação=((((idade<=20)) && (carteira>=5)) || (((idade>20) && (idade<=50)) && (carteira>=10)) || (((idade>50)) && (carteira>=15)))
   console.log(renovação)
 }
 
