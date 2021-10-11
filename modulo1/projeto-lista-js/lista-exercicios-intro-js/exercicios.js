@@ -146,3 +146,4 @@ function checaValidadeInscricaoLabenu() {
  estudanteLabenu=((idade==="sim") && (ensinoMedio==="sim") && (disponibilidadeCurso==="sim"))
 console.log(estudanteLabenu)
 }
+///teste
