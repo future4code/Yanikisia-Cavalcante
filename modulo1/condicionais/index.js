@@ -123,7 +123,7 @@ const etapaJogo = prompt("Qual etapa do jogo SF, DT ou FI? SF(semi final) DT(Dec
 const categoriaJogo = prompt("Qual a categoria do jogo (1,2,3 ou 4)?")
 const quantidadeIngresso = prompt("Qual a quantidade de ingressos?")
 const tipo = ["Nacional", "internacional"]
-console.log(tipo[0])
+
 const preco = (entrada, ingresso, objeto) => {
     if ((entrada === "SF") || (entrada === "sf")) {
         switch (categoriaJogo) {
