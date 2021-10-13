@@ -122,14 +122,15 @@ const tipoJogo = prompt("Qual o tipo do jogo que você quer, IN ou DO? IN(intern
 const etapaJogo = prompt("Qual etapa do jogo SF, DT ou FI? SF(semi final) DT(Decisão de terceiro) FI(Final)")
 const categoriaJogo = prompt("Qual a categoria do jogo (1,2,3 ou 4)?")
 const quantidadeIngresso = prompt("Qual a quantidade de ingressos?")
-
-const preco = (entrada,ingresso) => {
+const tipo = ["Nacional", "internacional"]
+console.log(tipo[0])
+const preco = (entrada, ingresso, objeto) => {
     if ((entrada === "SF") || (entrada === "sf")) {
         switch (categoriaJogo) {
             case '1':
                 console.log(`---------Dados da compra----------
     Nome do cliente:${nome}
-    Tipo do Jogo: ${tipoJogo}
+    Tipo do Jogo: ${objeto}
     Etapa do jogo:${etapaJogo.toLocaleUpperCase()}
     Categoria: ${1}
     Quantidade de ingresso: ${ingresso}
@@ -140,7 +141,7 @@ const preco = (entrada,ingresso) => {
             case '2':
                 console.log(`---------Dados da compra----------
     Nome do cliente:${nome}
-    Tipo do Jogo: ${tipoJogo}
+    Tipo do Jogo: ${objeto}
     Etapa do jogo:${etapaJogo.toLocaleUpperCase()}
     Categoria: ${1}
     Quantidade de ingresso: ${ingresso}
@@ -151,7 +152,7 @@ const preco = (entrada,ingresso) => {
             case '3':
                 console.log(`---------Dados da compra----------
     Nome do cliente:${nome}
-    Tipo do Jogo: ${tipoJogo}
+    Tipo do Jogo: ${objeto}
     Etapa do jogo:${etapaJogo.toLocaleUpperCase()}
     Categoria: ${1}
     Quantidade de ingresso: ${ingresso}
@@ -162,7 +163,7 @@ const preco = (entrada,ingresso) => {
             case '4':
                 console.log(`---------Dados da compra----------
     Nome do cliente:${nome}
-    Tipo do Jogo: ${tipoJogo}
+    Tipo do Jogo: ${objeto}
     Etapa do jogo:${etapaJogo.toLocaleUpperCase()}
     Categoria: ${1}
     Quantidade de ingresso: ${ingresso}
@@ -170,16 +171,16 @@ const preco = (entrada,ingresso) => {
     Valor do ingresso:R$ ${220},00
     Valor total: ${220 * ingresso}`)
                 break
-                default:
-                    console.log("Por favor, coloque uma categoria válida")
-                    break
+            default:
+                console.log("Por favor, coloque uma categoria válida")
+                break
         }
     } else if ((entrada === "DT") || (entrada === "dt")) {
         switch (categoriaJogo) {
             case '1':
                 console.log(`---------Dados da compra----------
     Nome do cliente:${nome}
-    Tipo do Jogo: ${tipoJogo}
+    Tipo do Jogo: ${objeto}
     Etapa do jogo:${etapaJogo.toLocaleUpperCase()}
     Categoria: ${1}
     Quantidade de ingresso: ${ingresso}
@@ -190,7 +191,7 @@ const preco = (entrada,ingresso) => {
             case '2':
                 console.log(`---------Dados da compra----------
     Nome do cliente:${nome}
-    Tipo do Jogo: ${tipoJogo}
+    Tipo do Jogo: ${objeto}
     Etapa do jogo:${etapaJogo.toLocaleUpperCase()}
     Categoria: ${2}
     Quantidade de ingresso: ${ingresso}
@@ -201,7 +202,7 @@ const preco = (entrada,ingresso) => {
             case '3':
                 console.log(`---------Dados da compra----------
     Nome do cliente:${nome}
-    Tipo do Jogo: ${tipoJogo}
+    Tipo do Jogo: ${objeto}
     Etapa do jogo:${etapaJogo.toLocaleUpperCase()}
     Categoria: ${3}
     Quantidade de ingresso: ${ingresso}
@@ -212,7 +213,7 @@ const preco = (entrada,ingresso) => {
             case '4':
                 console.log(`---------Dados da compra----------
     Nome do cliente:${nome}
-    Tipo do Jogo: ${tipoJogo}
+    Tipo do Jogo: ${objeto}
     Etapa do jogo:${etapaJogo.toLocaleUpperCase()}
     Categoria: ${4}
     Quantidade de ingresso: ${ingresso}
@@ -220,17 +221,18 @@ const preco = (entrada,ingresso) => {
     Valor do ingresso:R$ ${170},00
     Valor total: ${170 * ingresso}`)
                 break
-                default:
+            default:
                 console.log("Por favor, coloque uma categoria válida")
                 break
         }
     }
+
     else if ((entrada === "FI") || (entrada === "fi")) {
         switch (categoriaJogo) {
             case '1':
                 console.log(`---------Dados da compra----------
     Nome do cliente:${nome}
-    Tipo do Jogo: ${tipoJogo}
+    Tipo do Jogo: ${objeto}
     Etapa do jogo:${etapaJogo.toLocaleUpperCase()}
     Categoria: ${1}
     Quantidade de ingresso: ${ingresso}
@@ -241,7 +243,7 @@ const preco = (entrada,ingresso) => {
             case '2':
                 console.log(`---------Dados da compra----------
     Nome do cliente:${nome}
-    Tipo do Jogo: ${tipoJogo}
+    Tipo do Jogo: ${objeto}
     Etapa do jogo:${etapaJogo.toLocaleUpperCase()}
     Categoria: ${2}
     Quantidade de ingresso: ${ingresso}
@@ -252,7 +254,7 @@ const preco = (entrada,ingresso) => {
             case '3':
                 console.log(`---------Dados da compra----------
     Nome do cliente:${nome}
-    Tipo do Jogo: ${tipoJogo}
+    Tipo do Jogo: ${objeto}
     Etapa do jogo:${etapaJogo.toLocaleUpperCase()}
     Categoria: ${3}
     Quantidade de ingresso: ${ingresso}
@@ -263,7 +265,7 @@ const preco = (entrada,ingresso) => {
             case '4':
                 console.log(`---------Dados da compra----------
     Nome do cliente:${nome}
-    Tipo do Jogo: ${tipoJogo}
+    Tipo do Jogo: ${objeto}
     Etapa do jogo:${etapaJogo.toLocaleUpperCase()}
     Categoria: ${4}
     Quantidade de ingresso: ${ingresso}
@@ -271,20 +273,21 @@ const preco = (entrada,ingresso) => {
     Valor do ingresso:R$ ${330},00
     Valor total: ${330 * ingresso}`)
                 break
-                default:
-                    console.log("Por favor, coloque uma categoria válida")
-                    break
-        
+            default:
+                console.log("Por favor, coloque uma categoria válida")
+                break
+
         }
     } else {
         console.log("Por favor, coloque uma etapa de jogo válida.")
     }
 }
-if ((tipoJogo === "IN") || (tipoJogo==="in")) {
-preco(etapaJogo,Number(quantidadeIngresso*4.10))
+if ((tipoJogo === "IN") || (tipoJogo === "in")) {
+    const resultado = quantidadeIngresso * 4.10
+    preco(etapaJogo, resultado, tipo[1])
 }
-else if ((tipoJogo === "DO")||(tipoJogo==="do")) {
-    preco(etapaJogo,quantidadeIngresso)
+else if ((tipoJogo === "DO") || (tipoJogo === "do")) {
+    preco(etapaJogo, quantidadeIngresso, tipo[0])
 }
 else {
     console.log("Por Favor, coloque um tipo de jogo válido")
