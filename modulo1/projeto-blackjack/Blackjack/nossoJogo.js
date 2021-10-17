@@ -27,11 +27,9 @@ if (confirm("Quer iniciar uma nova rodada?")) {
    resultadoComputador = computadorCarta.valor + computadorCarta2.valor
    cartaUsuario = usuarioCarta.texto
    cartacomputador = computadorCarta.texto
+   console.log(`Usuário - ${cartaUsuario} ${usuarioCarta2.texto}- Pontuação: ${resultadoUsuario}`)
+   console.log(`Computador - ${cartacomputador} ${computadorCarta2.texto}- Potuação: ${resultadoComputador}`)
    while ((resultadoComputador <= 21) && (resultadoUsuario <= 21)) {
-
-      console.log(`Usuário - ${cartaUsuario} ${usuarioCarta2.texto}- Pontuação: ${resultadoUsuario}`)
-      console.log(`Computador - ${cartacomputador} ${computadorCarta2.texto}- Potuação: ${resultadoComputador}`)
-
       if ((resultadoComputador === 21) && (resultadoUsuario === 21)) {
          console.log("Empate")
       }
@@ -45,19 +43,21 @@ if (confirm("Quer iniciar uma nova rodada?")) {
       else if ((resultadoComputador < 21) && (resultadoUsuario < 21)) {
          console.log("Vamos redistribuir as cartas")
       }
+    
+
       usuarioCarta = comprarCarta()
       computadorCarta = comprarCarta()
-      usuarioCarta2 = comprarCarta()
-      computadorCarta2 = comprarCarta()
-      resultadoUsuario = usuarioCarta.valor + resultadoUsuario + usuarioCarta2.valor
-      resultadoComputador = computadorCarta.valor + resultadoComputador + computadorCarta2.valor
+      resultadoUsuario = usuarioCarta.valor + resultadoUsuario
+      resultadoComputador = computadorCarta.valor + resultadoComputador
       cartaUsuario = usuarioCarta.texto
       cartacomputador = computadorCarta.texto
+      console.log(`Usuário - ${cartaUsuario} - Pontuação: ${resultadoUsuario}`)
+      console.log(`Computador - ${cartacomputador}- Potuação: ${resultadoComputador}`)
+
       i++
    }
    if ((resultadoUsuario > 21) && (resultadoComputador > 21) && (usuarioGanhou === false) && (computadorGanhou === false)) {
-      console.log(`Usuário - ${cartaUsuario} ${usuarioCarta2.texto} - Pontuação: ${resultadoUsuario}`)
-      console.log(`Computador - ${cartacomputador} ${computadorCarta2.texto}- Potuação: ${resultadoComputador}`)
+
       console.log("OS DOIS DESAFIANTES PERDERAM")
    }
 
@@ -66,7 +66,7 @@ if (confirm("Quer iniciar uma nova rodada?")) {
       let i2 = 0
       while (resultadoUsuario <= 21) {
 
-         console.log(`Usuário - ${usuarioCarta.texto} ${usuarioCarta2.texto}- Pontuação: ${resultadoUsuario}`)
+         console.log(`Usuário - ${usuarioCarta.texto} - Pontuação: ${resultadoUsuario}`)
 
          if (resultadoUsuario === 21) {
 
@@ -74,7 +74,7 @@ if (confirm("Quer iniciar uma nova rodada?")) {
             usuarioGanhou = true
          }
          usuarioCarta = comprarCarta()
-         usuarioCarta2 = comprarCarta()
+
          resultadoUsuario = usuarioCarta.valor + resultadoUsuario + usuarioCarta2.valor
          cartaUsuario = usuarioCarta.texto
          i2++
@@ -88,8 +88,8 @@ if (confirm("Quer iniciar uma nova rodada?")) {
 
       while ((resultadoComputador <= 21) && (computadorGanhou === false)) {
          let ic = 0
-         computadorCarta
-         console.log(`Computador - ${computadorCarta.texto} ${computadorCarta2.texto} - Pontuação: ${resultadoComputador}`)
+         computadorCarta=comprarCarta()
+         console.log(`Computador - ${computadorCarta.texto}  - Pontuação: ${resultadoComputador}`)
          resultadoComputador = computadorCarta.valor + resultadoComputador + computadorCarta2.valor
          cartacomputador = computadorCarta.texto
          if (resultadoComputador === 21) {
@@ -99,13 +99,13 @@ if (confirm("Quer iniciar uma nova rodada?")) {
          }
 
          computadorCarta = comprarCarta()
-         resultadoComputador = computadorCarta.valor + resultadoComputador + computadorCarta2.valor
+         resultadoComputador = computadorCarta.valor + resultadoComputador
          cartacomputador = computadorCarta.texto
          ic++
       }
       if ((resultadoUsuario > 21) && (resultadoComputador > 21) && (usuarioGanhou === false) && (computadorGanhou === false)) {
-         console.log(`Usuário - ${cartaUsuario} ${usuarioCarta2.texto} - Pontuação: ${resultadoUsuario}`)
-         console.log(`Computador - ${cartacomputador} ${computadorCarta2.texto} - Potuação: ${resultadoComputador}`)
+         console.log(`Usuário - ${cartaUsuario}  - Pontuação: ${resultadoUsuario}`)
+         console.log(`Computador - ${cartacomputador}  - Potuação: ${resultadoComputador}`)
          console.log("OS DOIS DESAFIANTES PERDERAM")
       }
    }
