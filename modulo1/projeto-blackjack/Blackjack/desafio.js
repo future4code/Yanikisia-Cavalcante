@@ -20,9 +20,7 @@ if (confirm("Quer iniciar uma nova rodada?")) {
    let i = 0
    let resultadoUsuario = 0
    let resultadoComputador = 0
-   //   usuarioArray.push(comprarCarta())
-   //   usuarioArray.push(comprarCarta())
-   //   console.log(usuarioArray[0].texto,usuarioArray[1].texto)
+
    for (let i = 0; i < 2; i++) {
       usuarioArray.push(comprarCarta())
       computadorArray.push(comprarCarta())
