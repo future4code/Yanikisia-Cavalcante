@@ -138,55 +138,68 @@ function retornaSegundoMaiorESegundoMenor(array) {
             }
         }
         arrayMenorMaior.push(maior)
-        arrayMenorMaior.push(menor)}
-        return arrayMenorMaior
-
-
+        arrayMenorMaior.push(menor)
     }
+    return arrayMenorMaior
 
-    // EXERCÍCIO 11
-    function retornaChamadaDeFilme(filme) {
-        return `Venha assistir ao filme ${filme.nome}, de ${filme.ano}, dirigido por ${filme.diretor} e estrelado por ${filme.atores.join(", ")}.`
 
+}
+
+// EXERCÍCIO 11
+function retornaChamadaDeFilme(filme) {
+    return `Venha assistir ao filme ${filme.nome}, de ${filme.ano}, dirigido por ${filme.diretor} e estrelado por ${filme.atores.join(", ")}.`
+
+}
+
+// EXERCÍCIO 12
+function retornaPessoaAnonimizada(pessoa) {
+    let objeto = {
+        ...pessoa,
+        nome: "ANÔNIMO"
     }
+    return objeto
+}
 
-    // EXERCÍCIO 12
-    function retornaPessoaAnonimizada(pessoa) {
-        let objeto = {
-            ...pessoa,
-            nome: "ANÔNIMO"
-        }
-        return objeto
-    }
+// EXERCÍCIO 13A
+function retornaPessoasAutorizadas(pessoas) {
+    const pessoasComPermisao = pessoas.filter((pessoa) => {
+        return ((pessoa.idade > 14 && pessoa.idade < 60) && (pessoa.altura > 1.5))
+    })
+    return pessoasComPermisao
+}
 
-    // EXERCÍCIO 13A
-    function retornaPessoasAutorizadas(pessoas) {
-        const pessoasComPermisao = pessoas.filter((pessoa) => {
-            return ((pessoa.idade > 14 && pessoa.idade < 60) && (pessoa.altura > 1.5))
-        })
-        return pessoasComPermisao
-    }
+// EXERCÍCIO 13B
+function retornaPessoasNaoAutorizadas(pessoas) {
+    const pessoasSemPermisao = pessoas.filter((pessoa) => {
 
-    // EXERCÍCIO 13B
-    function retornaPessoasNaoAutorizadas(pessoas) {
-        const pessoasSemPermisao = pessoas.filter((pessoa) => {
+        return ((pessoa.idade <= 14) || (pessoa.idade > 60) || ((pessoa.altura < 1.5) && ((pessoa.idade >= 14) || (pessoa.idade < 60))))
+    })
+    return pessoasSemPermisao
+}
 
-            return ((pessoa.idade <= 14) || (pessoa.idade > 60) || ((pessoa.altura < 1.5) && ((pessoa.idade >= 14) || (pessoa.idade < 60))))
-        })
-        return pessoasSemPermisao
-    }
+// EXERCÍCIO 14
+function retornaContasComSaldoAtualizado(contas) {
+    const compras = contas.map((ahh) => {
+        let totalCompras = ahh.compras.reduce((a, b) => a + b, 0)
+        let totalSaldo = ahh.saldoTotal
+        return { ...ahh, saldoTotal: totalSaldo - totalCompras, compras: [] }
+    })
+    return compras
+}
 
-    // EXERCÍCIO 14
-    function retornaContasComSaldoAtualizado(contas) {
-        let totalCompras = 0
-    }
+// EXERCÍCIO 15A
+function retornaArrayOrdenadoAlfabeticamente(consultas) {
+    return consultas.sort((a, b) => {
+        if (a.nome < b.nome) { return -1 }
+        if (a.nome > b.nome) { return 1 }
 
-    // EXERCÍCIO 15A
-    function retornaArrayOrdenadoAlfabeticamente(consultas) {
+        return 0
+    })
+}
 
-    }
-
-    // EXERCÍCIO 15B
-    function retornaArrayOrdenadoPorData(consultas) {
-
-    }
+// EXERCÍCIO 15B
+function retornaArrayOrdenadoPorData(consultas) {
+return consultas.sort((a,b)=>{
+    return new Date (a.datas)
+})
+}
