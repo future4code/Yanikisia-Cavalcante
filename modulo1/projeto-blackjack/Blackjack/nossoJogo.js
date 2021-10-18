@@ -43,7 +43,7 @@ if (confirm("Quer iniciar uma nova rodada?")) {
       else if ((resultadoComputador < 21) && (resultadoUsuario < 21)) {
          console.log("Vamos redistribuir as cartas")
       }
-    
+
 
       usuarioCarta = comprarCarta()
       computadorCarta = comprarCarta()
@@ -88,7 +88,7 @@ if (confirm("Quer iniciar uma nova rodada?")) {
 
       while ((resultadoComputador <= 21) && (computadorGanhou === false)) {
          let ic = 0
-         computadorCarta=comprarCarta()
+         computadorCarta = comprarCarta()
          console.log(`Computador - ${computadorCarta.texto}  - Pontuação: ${resultadoComputador}`)
          resultadoComputador = computadorCarta.valor + resultadoComputador + computadorCarta2.valor
          cartacomputador = computadorCarta.texto
