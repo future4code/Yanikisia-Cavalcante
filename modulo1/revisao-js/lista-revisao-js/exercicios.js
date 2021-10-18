@@ -31,8 +31,9 @@ function retornaNumerosPares(array) {
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
     let arrayParesElevadoADois = []
-    for (nume of retornaNumerosPares(array)) {
-        arrayParesElevadoADois.push(Math.pow(nume, 2))
+    for (let nume of retornaNumerosPares(array)) {
+        nume=nume**(2)
+        arrayParesElevadoADois.push(nume)
     }
     return arrayParesElevadoADois
 }
@@ -73,16 +74,52 @@ function retornaObjetoEntreDoisNumeros(num1, num2) {
 
 // EXERCÍCIO 08
 function retornaNPrimeirosPares(n) {
+    let arrayDemoniaco=[]
+    for(let i=0; i<=n;i++){
+
+        arrayDemoniaco.push(i)
+    }
+    return retornaNumerosPares(arrayDemoniaco)
 
 }
 
 // EXERCÍCIO 09
 function classificaTriangulo(ladoA, ladoB, ladoC) {
+if((ladoA===ladoB)&& (ladoC===ladoA)){
+    return "Equilátero"
+}else if( ((ladoC===ladoA)&&(ladoA!==ladoB)) || ((ladoA===ladoB)&&(ladoC!==ladoB)) ||  ((ladoB===ladoC)&&(ladoA!==ladoB))){
 
+    return "Isósceles"
+}else{
+    return "Escaleno"
+}
 }
 
 // EXERCÍCIO 10
 function retornaSegundoMaiorESegundoMenor(array) {
+    let maior =0
+  let menor=0
+  let objeto={}
+    for(let num of array){
+        if (num > maior) {
+            maior=0
+            maior=num1
+            menor=num2
+        }
+    }
+  if (num1 > maior) {
+      maior=0
+      maior=num1
+      menor=num2
+  }
+  else if (num1 < num2) {
+      maior=0
+      menor=0
+      maior=num2
+      menor=num1
+  }
+    
+    return objeto
 
 }
 
