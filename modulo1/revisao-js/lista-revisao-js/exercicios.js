@@ -16,7 +16,7 @@ function retornaArrayInvertido(array) {
 // EXERCÍCIO 03
 function retornaArrayOrdenado(array) {
     function compararNumeros(a, b) {
-        return a - b;
+        return a - b
     }
     return array.sort(compararNumeros)
 }
@@ -32,7 +32,7 @@ function retornaNumerosPares(array) {
 function retornaNumerosParesElevadosADois(array) {
     let arrayParesElevadoADois = []
     for (let nume of retornaNumerosPares(array)) {
-        nume=nume**(2)
+        nume = nume ** (2)
         arrayParesElevadoADois.push(nume)
     }
     return arrayParesElevadoADois
@@ -53,107 +53,140 @@ function retornaMaiorNumero(array) {
 // EXERCÍCIO 07
 function retornaObjetoEntreDoisNumeros(num1, num2) {
     let maior = num1
-  let menor = num2
-  let objeto={}
+    let menor = num2
+    let objeto = {}
 
-  if (num1 > num2) {
-      maior=0
-      menor=0
-      maior=num1
-      menor=num2
-  }
-  else if (num1 < num2) {
-      maior=0
-      menor=0
-      maior=num2
-      menor=num1
-  }
-    objeto={maiorNumero:maior,maiorDivisivelPorMenor:((maior%menor)===0),diferenca:maior-menor}
+    if (num1 > num2) {
+        maior = 0
+        menor = 0
+        maior = num1
+        menor = num2
+    }
+    else if (num1 < num2) {
+        maior = 0
+        menor = 0
+        maior = num2
+        menor = num1
+    }
+    objeto = { maiorNumero: maior, maiorDivisivelPorMenor: ((maior % menor) === 0), diferenca: maior - menor }
     return objeto
 }
 
 // EXERCÍCIO 08
 function retornaNPrimeirosPares(n) {
-    let arrayDemoniaco=[]
-    for(let i=0; i<=n;i++){
+    let arrayDemoniaco = []
+    let i = 0
+    while (arrayDemoniaco.length < n) {
+        if (((i % 2) === 0)) {
+            arrayDemoniaco.push(i)
+        }
 
-        arrayDemoniaco.push(i)
+        i++
     }
-    return retornaNumerosPares(arrayDemoniaco)
+    return arrayDemoniaco
 
 }
 
 // EXERCÍCIO 09
 function classificaTriangulo(ladoA, ladoB, ladoC) {
-if((ladoA===ladoB)&& (ladoC===ladoA)){
-    return "Equilátero"
-}else if( ((ladoC===ladoA)&&(ladoA!==ladoB)) || ((ladoA===ladoB)&&(ladoC!==ladoB)) ||  ((ladoB===ladoC)&&(ladoA!==ladoB))){
+    if ((ladoA === ladoB) && (ladoC === ladoA)) {
+        return "Equilátero"
+    } else if (((ladoC === ladoA) && (ladoA !== ladoB)) || ((ladoA === ladoB) && (ladoC !== ladoB)) || ((ladoB === ladoC) && (ladoA !== ladoB))) {
 
-    return "Isósceles"
-}else{
-    return "Escaleno"
-}
+        return "Isósceles"
+    } else {
+        return "Escaleno"
+    }
 }
 
 // EXERCÍCIO 10
 function retornaSegundoMaiorESegundoMenor(array) {
-    let maior =0
-  let menor=0
-  let objeto={}
-    for(let num of array){
-        if (num > maior) {
-            maior=0
-            maior=num1
-            menor=num2
-        }
+    let maior = 0
+    let arrayMenorMaior = []
+    if (array.length === 2) {
+        return [array[0], array[1]]
     }
-  if (num1 > maior) {
-      maior=0
-      maior=num1
-      menor=num2
-  }
-  else if (num1 < num2) {
-      maior=0
-      menor=0
-      maior=num2
-      menor=num1
-  }
-    
-    return objeto
+    else {
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] > maior) {
+                maior = array[i]
+            }
+        }
+        let menor = maior
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] < menor) {
+                menor = array[i]
+            }
+        }
 
-}
+        const tirarMaior = array.filter((num) => {
+            return num !== maior
+        })
+        maior = 0
+        for (let i = 0; i < tirarMaior.length; i++) {
+            if (tirarMaior[i] > maior) {
+                maior = tirarMaior[i]
+            }
+        }
+        const tirarMenor = tirarMaior.filter((num) => {
+            return num != menor
+        })
+        menor = maior
+        for (let i = 0; i < tirarMenor.length; i++) {
+            if (tirarMenor[i] < menor) {
+                menor = tirarMenor[i]
+            }
+        }
+        arrayMenorMaior.push(maior)
+        arrayMenorMaior.push(menor)}
+        return arrayMenorMaior
 
-// EXERCÍCIO 11
-function retornaChamadaDeFilme(filme) {
 
-}
+    }
 
-// EXERCÍCIO 12
-function retornaPessoaAnonimizada(pessoa) {
+    // EXERCÍCIO 11
+    function retornaChamadaDeFilme(filme) {
+        return `Venha assistir ao filme ${filme.nome}, de ${filme.ano}, dirigido por ${filme.diretor} e estrelado por ${filme.atores.join(", ")}.`
 
-}
+    }
 
-// EXERCÍCIO 13A
-function retornaPessoasAutorizadas(pessoas) {
+    // EXERCÍCIO 12
+    function retornaPessoaAnonimizada(pessoa) {
+        let objeto = {
+            ...pessoa,
+            nome: "ANÔNIMO"
+        }
+        return objeto
+    }
 
-}
+    // EXERCÍCIO 13A
+    function retornaPessoasAutorizadas(pessoas) {
+        const pessoasComPermisao = pessoas.filter((pessoa) => {
+            return ((pessoa.idade > 14 && pessoa.idade < 60) && (pessoa.altura > 1.5))
+        })
+        return pessoasComPermisao
+    }
 
-// EXERCÍCIO 13B
-function retornaPessoasNaoAutorizadas(pessoas) {
+    // EXERCÍCIO 13B
+    function retornaPessoasNaoAutorizadas(pessoas) {
+        const pessoasSemPermisao = pessoas.filter((pessoa) => {
 
-}
+            return ((pessoa.idade <= 14) || (pessoa.idade > 60) || ((pessoa.altura < 1.5) && ((pessoa.idade >= 14) || (pessoa.idade < 60))))
+        })
+        return pessoasSemPermisao
+    }
 
-// EXERCÍCIO 14
-function retornaContasComSaldoAtualizado(contas) {
+    // EXERCÍCIO 14
+    function retornaContasComSaldoAtualizado(contas) {
+        let totalCompras = 0
+    }
 
-}
+    // EXERCÍCIO 15A
+    function retornaArrayOrdenadoAlfabeticamente(consultas) {
 
-// EXERCÍCIO 15A
-function retornaArrayOrdenadoAlfabeticamente(consultas) {
+    }
 
-}
+    // EXERCÍCIO 15B
+    function retornaArrayOrdenadoPorData(consultas) {
 
-// EXERCÍCIO 15B
-function retornaArrayOrdenadoPorData(consultas) {
-
-}
+    }
