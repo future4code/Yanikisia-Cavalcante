@@ -1,4 +1,4 @@
-<!-- 
+```
 function calculaSalario(qtdeCarrosVendidos, valorTotalVendas) {
 // Escreva seu código aqui
  const salario=2000
@@ -12,5 +12,4 @@ for(let i=0;i<qtdeCarrosVendidos;i++){
 resultado=salario+resultado
 return resultado
 }
- -->
- <!-- so testo aqui -->
+ ```
