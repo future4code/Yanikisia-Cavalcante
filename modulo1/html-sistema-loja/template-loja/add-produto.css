@@ -1,0 +1,66 @@
+*{
+    margin: 0px; 
+    padding: 0px;
+    box-sizing: 0;
+    border-box: 0;
+}
+body{
+    background-color: bisque
+}
+#nome-loja{
+    color:rgb(219, 92, 78);
+    text-align: center;
+    font-size: 30px;
+    font-style: italic;
+}
+.footer{
+    padding: 10px;
+    width: 100vw ;
+    background-color: rgb(243, 139, 157);
+ 
+}
+.pagina-inicial{
+    color: rgb(175, 7, 35);
+}
+.Controle{
+    color: rgb(85, 2, 30);
+  
+}
+.add-produtos{
+    color: rgb(180, 49, 71);
+}
+.Funcionarios{
+    color:rgb(128, 63, 73);
+    
+}
+.formatacao-add{
+    text-align: center;
+    margin: 20px;
+}
+#nome{
+    margin-right: auto;
+}
+#quantidade{
+    margin-right: 23px;
+}
+#preco{
+    margin-right: 10px;
+}
+
+.links{
+    
+    position: fixed;
+    right: 900px;
+    bottom: 0px;
+    margin: 0px;
+    
+}
+.transformar-div{
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100vw ;
+ background-color: rgb(243, 139, 157);
+ text-align: center;
+    padding-top: 30px;
+ }

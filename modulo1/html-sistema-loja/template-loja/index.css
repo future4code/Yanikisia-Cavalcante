@@ -1,0 +1,76 @@
+*{
+    margin: 0px; 
+    padding: 0px;
+    box-sizing: 0;
+
+}
+.cabecalho{
+    
+    width: 100vw ;
+    background-color: rgb(243, 139, 157);
+ 
+}
+h1{
+    background-color: bisque;
+    color: rgb(238, 45, 110);
+    text-align: center;
+    margin-bottom: 2px;
+ 
+}
+#nome-loja{
+    color:rgb(219, 92, 78);
+}
+.links{
+    
+    position: fixed;
+    right: 900px;
+    bottom: 0px;
+}
+.pagina-inicial{
+    color: rgb(175, 7, 35);
+}
+.Controle{
+    color: rgb(85, 2, 30);
+  
+}
+.add-produtos{
+    color: rgb(180, 49, 71);
+}
+.Funcionarios{
+    color:rgb(128, 63, 73);
+    
+}
+.transformar-div{
+   position: fixed;
+   left: 0px;
+   bottom: 0px;
+   width: 100vw ;
+background-color: rgb(243, 139, 157);
+text-align: center;
+}
+.imagem{
+    margin-left: 20px;
+    width: 30px;
+}
+body{
+    background-color: bisque
+}
+#discricao{
+   
+    color: rgb(204, 8, 74);
+    text-align: justify;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+p{
+  
+    color: rgb(204, 8, 74);
+    text-align: center;
+    margin-bottom: 2px;
+}
+#titulo-redes-sociais{
+    margin: 10px 5px 3px 6px;
+    background-color: rgb(243, 139, 157);
+    color:bisque ;
+}
+
