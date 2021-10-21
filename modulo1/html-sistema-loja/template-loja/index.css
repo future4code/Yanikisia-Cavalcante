@@ -21,9 +21,9 @@ h1{
     color:rgb(219, 92, 78);
 }
 .links{
-    
+    text-align: left;
     position: fixed;
-    right: 900px;
+   
     bottom: 0px;
 }
 .pagina-inicial{

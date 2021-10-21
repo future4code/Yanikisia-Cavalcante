@@ -19,20 +19,12 @@ h2{
     left: 0px;
     bottom: 0px;
     width: 100vw ;
-  
+  text-align: left;
  background-color: rgb(243, 139, 157);
- padding: 10px ;
+ padding-top: 30px ;
  
 }
-/* .div{
-    position: fixed;
-    left: 0px;
-    bottom: 0px;
-    width: 100vw ;
-  
- background-color: rgb(243, 139, 157);
- padding: 10px ;
- } */
+
 #titulo{
     color:rgb(219, 92, 78);
     text-align: center;
