@@ -37,9 +37,7 @@ div>p:first-child {
     display: inline;
 }
 
-div img {
-  
-}
+
 
 .referencia{
     position: sticky;
@@ -169,6 +167,13 @@ td button {
     height: 30px;
     border-radius: 5px;
     color: black;
+}
+div img:hover{
+    opacity: 0.5;
+}
+div img:active{
+    background-color: black;
+    transform: rotate(90deg);
 }
 
 .container-do-search {
