@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Adicionar Produto</title>
+    <link rel="stylesheet" href="add-produto.css">
+</head>
+
+<body >
+    <div class="footer">
+        <p id="nome-loja">Bon appétit</p>
+    </div>
+    <div class="transformar-div">
+        <div class="links">
+            <a class="pagina-inicial" href="index.html">Página Inicial</a>
+            <a class="Controle" href="ctrl-estoque.html" target="_blank">Controle de Estoque</a>
+            <a class="add-produtos" href="add-produto.html" target="_blank">Adicionar Produto</a>
+            <a class="Funcionarios" href="funcionarios.html" target="_blank">Funcionários</a>
+        </div>
+    </div>
+
+    <h2 class="formatacao-add">Adicionar Produto</h2>
+    <form action="#">
+        <div class="formatacao-add">
+            <label for="link-foto">Link para foto: </label>
+            <input type="url" id="link-foto" name="link-foto">
+        </div>
+
+        <div class="formatacao-add" id="nome">
+            <label for="nome">Nome: </label>
+
+            <input type="text" id="nome" name="descrição">
+        </div>
+
+        <div class="formatacao-add" id="preco">
+            <label for="preco">Preço (em R$): </label>
+
+            <input type="" id="preco" name="preço">
+        </div>
+
+        <div class="formatacao-add" id="quantidade">
+
+            <label for="quantidade">Quantidade disponível: </label>
+            <input type="number" id="quantidade" name="Quantidade disponivel">
+        </div>
+
+        <div id="butao" class="formatacao-add" class="form-add" >
+
+            <button  type="submit">Adicionar</button>
+        </div>
+
+    </form>
+
+</body>
+
+</html>
