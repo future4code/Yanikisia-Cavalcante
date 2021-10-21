@@ -87,7 +87,14 @@ div img {
     color: white;
     
 }
-
+#primeira-mensagem{
+    position: relative;
+    top:20px;
+    margin-top: 20px;
+    padding: 15px 0px;
+    
+    left: 580px;
+}
 
 
 #container-de-descricao>ol {
