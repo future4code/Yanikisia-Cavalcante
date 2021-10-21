@@ -36,7 +36,7 @@ div>p:first-child {
 }
 
 div img {
-    background: black;
+ 
 }
 .referencia{
     position: sticky;
@@ -72,6 +72,8 @@ div img {
 
 .icone {
     height: 15px;
+    width: 15px;
+    transform: rotate(277deg);
 }
 .caixa{
     width: 180px;
