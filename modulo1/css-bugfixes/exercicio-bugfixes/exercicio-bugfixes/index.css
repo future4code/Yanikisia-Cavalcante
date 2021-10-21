@@ -22,6 +22,9 @@ h2 {
 input {
     height: 20px;
     width: 500px;
+    border: none;
+    border-bottom: 2px solid black;
+  
 }
 
 button:focus {
@@ -172,21 +175,15 @@ div img:hover{
     opacity: 0.5;
 }
 div img:active{
-    background-color: black;
-    transform: rotate(90deg);
+    opacity: 1;
 }
 
 .container-do-search {
     margin-top: 20px;
     height: 100px;
-    
+ 
 }
-#remover-bordas{
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom-width: 2px;
-}
+
 
 #back-button {
     background-color: white;
