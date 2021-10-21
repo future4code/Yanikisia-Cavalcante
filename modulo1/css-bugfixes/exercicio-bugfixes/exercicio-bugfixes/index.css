@@ -26,8 +26,9 @@ button:focus {
     color: white;
 }
 
+
 img {
-    width: 100px;
+    width: 65px;
 }
 
 div>p:first-child {
@@ -69,6 +70,10 @@ div img {
 .icone {
     height: 15px;
 }
+.caixa{
+    width: 180px;
+    
+}
 
 
 /** 
@@ -80,9 +85,13 @@ div img {
 #container-de-descricao {
     background-color: #2274a5;
     color: white;
+    
 }
 
+
+
 #container-de-descricao>ol {
+    margin-top: 10px;
     padding: 15px 0px;
 }
 
