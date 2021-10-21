@@ -152,8 +152,14 @@ td button {
 .container-do-search {
     margin-top: 20px;
     height: 100px;
+    
 }
-
+#remover-bordas{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-width: 2px;
+}
 
 #back-button {
     background-color: white;
