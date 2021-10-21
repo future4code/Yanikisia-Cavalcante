@@ -56,6 +56,14 @@ div img {
     color: white;
     
 }
+#botao-comprar:hover  {
+    background-color: #793609;
+}
+
+#botao-comprar:active {
+    color: white;
+}
+
 .texto{
     text-align: center;
 }
