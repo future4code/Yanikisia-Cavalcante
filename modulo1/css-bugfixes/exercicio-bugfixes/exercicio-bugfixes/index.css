@@ -1,0 +1,201 @@
+
+/** 
+  *
+  *  ESTILOS GERAIS 
+  *
+  **/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+}
+
+
+h2 {
+    background-color: #fe7e02;
+    padding: 10px 5px 10px 5px;
+    color: white;
+    text-align: center;
+}
+
+input {
+    height: 20px;
+    width: 500px;
+    border: none;
+    border-bottom: 2px solid black;
+  
+}
+
+button:focus {
+    color: white;
+}
+
+
+img {
+    width: 66px;
+}
+
+div>p:first-child {
+    display: inline;
+}
+
+
+
+.referencia{
+    position: sticky;
+    bottom: 200px;
+    left: 435px;
+    
+}
+.botao-amarelo {
+    position:relative ;
+    top: 200px;
+    right: 280px;
+    background-color: #ffaf43;
+    width: 250px;
+    height: 40px;   
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+    
+}
+#botao-comprar:hover  {
+    background-color: #793609;
+}
+
+#botao-comprar:active {
+    color: white;
+}
+
+.texto{
+    text-align: center;
+}
+
+.botao-amarelo:hover {
+    background-color: #c44f00;
+}
+
+.container {
+    position: relative;
+    height: 500px;
+    text-align: center;
+}
+
+.icone {
+    height: 15px;
+    width: 15px;
+    transform: rotate(277deg);
+}
+.caixa{
+    width: 180px;
+    
+}
+.voltar{
+width: 100px;
+margin-left: auto;
+margin-right: 670px;
+}
+
+/** 
+  *
+  *  ESTILOS HOME 
+  *
+  **/
+
+#container-de-descricao {
+    background-color: #2274a5;
+    color: white;
+    
+}
+#primeira-mensagem{
+    position: relative;
+    top:20px;
+    margin-top: 20px;
+    padding: 15px 0px;
+    
+    left: 580px;
+}
+ol{
+    margin:  0 auto;
+  
+    width: 200px;
+}
+
+#container-de-descricao>ol {
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 12px 4px;
+}
+#paragrafo{
+  
+    margin: 1px;
+    width: 300px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px;
+    text-align: start;
+}
+#container-para-comprar {
+    background-color: #e7eb90;
+}
+
+#container-para-comprar>p {
+    color: #c44f00;
+    padding: 100px 0;
+    font-size: 60px;
+}
+
+
+/**
+  *
+  *  ESTILOS COMPRAR 
+  *
+  **/
+
+div:nth-child(2),
+div:last-child {
+    text-align: center;
+}
+
+table {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td button {
+    background-color: #fadf63;
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    color: black;
+}
+div img:hover{
+    opacity: 0.5;
+}
+div img:active{
+    opacity: 1;
+}
+
+.container-do-search {
+    margin-top: 20px;
+    height: 100px;
+ 
+}
+
+
+#back-button {
+    background-color: white;
+    width: 100px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 10px;
+    color: black;
+    margin-top: 80px;
+}
+
+#back-button:hover {
+    background-color: #635a3d
+}
