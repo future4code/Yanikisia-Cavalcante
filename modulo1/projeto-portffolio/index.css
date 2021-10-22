@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    overflow-x: hidden;
+    overflow-y: auto;
+    overflow-y: auto;
+}
+header{
+   
+    padding: 130px;
+    background-color: #FF964F;
+    width: 100vw;
+}
+header>div>p{
+    display: inline;
+    text-align: start;
+    font-size: 60px;
+    color: #C65102;
+  
+}
+.informacoes{
+    display: inline;
+   margin-left: 400px;
+   
+}
+.redirecionados{
+    left: 100px;
+    right: 10px;
+    font-size: 30px;
+    display: inline;
+    margin-left: 20px;
+    
+    color:#C65102;
+}
+main{
+    background-color: coral;
+    width: 100vw;  
+}
+
+#discricao-titulo{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.discricao p{
+    font-size: 20px;
+    margin-left: 3px;
+    width: 200px;
+}
+footer{
+    position: fixed;
+    bottom: 1px;
+    border: 1%;
+    background-color: #FFD8B1;
+    width: 100vw;
+    margin: 0 auto;
+    
+}
+p{
+    font-size: 60px;
+    text-align: center;
+}
