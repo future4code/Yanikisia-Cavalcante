@@ -5,7 +5,7 @@
 .container{
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 114vh;
     justify-content: space-between;
 }
 header{
@@ -44,10 +44,6 @@ button{
 main{
     display: flex;
     flex-grow: 1;
-}
-#tabela{
-    flex-grow: 1;
-    background-color: blue;
 }
 #menu{
     display: grid;
@@ -106,14 +102,40 @@ main{
     align-items: center;
     justify-items: start;
     grid-template-columns: 33px 1fr 1fr;
-    align-items: stretch
+    align-items: stretch;
+}
+#tabela{
+    flex-grow: 1;
+   display: flex;
+   flex-wrap: wrap;
+  
+}
+.tabelinha{
+    display: grid;
+    grid-template-rows:1fr 30px 40px;
+    grid-template-columns: 240px;
+    align-items: center;
+    justify-items: center;
+    margin: 10px;
+    box-shadow: 0 0 1em darkgray;
+}
+.tabelinha img{
+    width: 240px;
+}
+.discricao-titulo{
+    font-size: 23px;
+}
+.descricao{
+ text-align: center;
+
 }
 footer{
   display: flex;
     background-color: mediumvioletred;
-    height: 50px;
+    height: 60px;
     justify-content: center;
-    padding: 0 10px;
+    padding: 0 40px;
+    
     align-items: center;
 }
 footer img{
