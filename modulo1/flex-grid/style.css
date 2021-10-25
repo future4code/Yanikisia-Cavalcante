@@ -1,0 +1,73 @@
+*{ 
+    margin: 0 ;
+    padding: 0;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+}
+header{
+    display: flex;
+    height: 60px;
+   background-color: mediumvioletred;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+} 
+header div{
+    display: flex;
+    align-items: center;
+    
+    width: 150px;
+    justify-content: space-evenly
+}
+
+header img{
+    width: 20px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 10px;
+}
+button{
+    width: 54px;
+}
+#titulo{
+    
+    font-size: 23px;
+    
+}
+.bolinho{
+    margin-top: 3px;
+}
+main{
+    display: flex;
+    flex-grow: 1;
+}
+#tabela{
+    flex-grow: 1;
+    background-color: blue;
+}
+#menu{
+    width: 200px;
+    background-color: black;
+}
+
+footer{
+  display: flex;
+    background-color: mediumvioletred;
+    height: 50px;
+    justify-content: center;
+    padding: 0 10px;
+    align-items: center;
+}
+footer img{
+    display: inline;
+    width: 18px;
+    margin-left: 5px;
+}
+footer p{
+    display: inline;
+}
+
