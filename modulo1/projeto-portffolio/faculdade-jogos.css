@@ -9,15 +9,23 @@ header{
     padding: 50px;
    background-color: #ece9e9;
 }
-.head{
+head p{
     position:absolute;
     display: inline;
-    color: green;
     font-size: 40px;
     width: 500px;
     margin-left: 400px;
     top: 20px;
    
+}
+.head{
+    
+    width: 600px;
+    margin: 0 auto;
+}
+.head a{
+    background-color: #ece9e9;
+    color: #ece9e9;
 }
 #titulo1{
     display: inline;
@@ -41,12 +49,86 @@ opacity: 1;
 #titulo2:active{
     opacity: 1;
 }
+main{
+    padding-top: 10px;
+    background-color: #f5f5f5;
+}
 section{
+    
+    display: inline;
+   
+}
+section p{
+    font-size: 40px;
+    margin-bottom: 12px;
+    color: #5684AE;
+}
+
+#mapa-conceitual{
+    display: inline;
+   
+    width: 400px;
+}
+#mapa-conceitual img{
+    width: 200px;
+}
+.descricao-conceitual{
+    position: absolute;
+    top: 380px;
+    width: 300px;
+    right: 640px;
+    color: #5684AE;
+}
+#mapa-completo{
+    position: absolute;
+    width: 400px;
+    top: 276px;
+    left: 720px;
+}
+#controles{
+    position: absolute;
+    width: 400px;
+    top: 576px;
+    border: 2px solid black;
+    left: 720px;
+}
+#tela-inicial{
+    border: 2px solid black;
+    width: 400px;
+    top: 676px;
+    left: 720px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.descricao-controles{
+    position: absolute;
+    width: 200px;
+    top: 636px;
+    left: 1127px;
+    color: #5684AE;
+}
+.discricao-mapa{
+    position: absolute;
+    width: 200px;
+    top: 366px;
+    left: 1125px;
+    color: #5684AE;
+}
+.descricao-inicial{
+    position: absolute;
+    width: 200px;
+    top: 666px;
+    left: 425px;
+    color: #5684AE;
+}
+ span{
+    font-size: 20px;
+
     
 }
 footer{
     position: relative;
-    bottom: 1px;
+    bottom: 0;
     background-color: #505050;
     width: 100vw;
 }
