@@ -50,10 +50,64 @@ main{
     background-color: blue;
 }
 #menu{
+    display: grid;
     width: 200px;
-    background-color: black;
+   background-color: #f2d0e0;
+   grid-template-columns: 200px;
+   grid-template-rows: 40px 40px 40px 40px 1fr;
+   justify-items: start;
+   align-items: center
 }
-
+#menu img{
+    width: 13px;
+}
+#home{
+    display: grid;
+    width: 200px;
+    align-items: center;
+    justify-items: start;
+    grid-template-columns: 33px 1fr 1fr;
+}
+.imagem-primeira{
+    justify-self: center;
+    margin-bottom: 3px;
+    margin-right: 3px;
+}
+#home p{
+    grid-column-start:2 ;
+    
+}
+.imagem-segunda{
+    grid-column-start: 3;
+    justify-self: center;
+}
+#produtos{
+    display: grid;
+    width: 200px;
+    align-items: center;
+    justify-items: start;
+    grid-template-columns: 33px 1fr 1fr;
+    align-items: stretch
+}
+#produtos img{
+    justify-self: center;
+}
+#carinho{
+    display: grid;
+    width: 200px;
+    align-items: center;
+    justify-items: start;
+    grid-template-columns: 33px 1fr 1fr;
+    align-items: stretch
+}
+#perfil{
+    display: grid;
+    width: 200px;
+    align-items: center;
+    justify-items: start;
+    grid-template-columns: 33px 1fr 1fr;
+    align-items: stretch
+}
 footer{
   display: flex;
     background-color: mediumvioletred;
