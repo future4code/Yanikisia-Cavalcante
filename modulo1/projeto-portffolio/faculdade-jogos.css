@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'The Hound';
+}
+header{
+    width: 94vw;
+    font-size: 30px;
+    padding: 50px;
+   background-color: #ece9e9;
+}
+.head{
+    position:absolute;
+    display: inline;
+    color: green;
+    font-size: 40px;
+    width: 500px;
+    margin-left: 400px;
+    top: 20px;
+   
+}
+#titulo1{
+    display: inline;
+    margin-left: 30px;
+    margin-right: 32px;
+    color: #5684AE;
+}
+#titulo2{
+    display: inline;
+    color: #5684AE;
+}
+#titulo1:active{
+opacity: 1;
+}
+#titulo1:hover{
+    opacity: 0.5;
+}
+#titulo2:hover{
+    opacity: 0.5;
+}
+#titulo2:active{
+    opacity: 1;
+}
+section{
+    
+}
+footer{
+    position: relative;
+    bottom: 1px;
+    background-color: #505050;
+    width: 100vw;
+}
+.titulo-contatos p{
+    font-size: 45px;
+    color: rgb(212, 209, 209);
+}
+.discricao-contatos p{
+    font-size: 24px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: rgb(212, 209, 209);
+}
+.foot{
+    width: 250px;
+ margin: 0 auto;
+ margin-top: 20px; 
+}
+
+p{
+    font-size: 60px;
+    text-align: center;
+}
+.email{
+    display: inline;
+    right:600px;
+    margin-right: 20px;
+}
+.email a{
+   text-decoration: none;
+  
+   background-color: #505050;
+}
+.email img{
+    width: 50px;
+   
+} 
+.email:hover{
+    opacity: 0.5;
+}
+.email:active{
+    opacity: 1;
+}
+.github{
+    display: inline;
+    margin-right: 20px;
+}
+.github a{
+    background-color: #505050;
+}
+.github img{
+    width: 50px;
+}
+.github:hover{
+    opacity: 0.5;
+}
+.github:active{
+    opacity: 1;
+}
+.formulario{
+    display: inline;
+    right:600px;
+    margin-right: 20px;
+}
+.formulario a{
+    background-color: #505050;
+}
+.formulario img{
+    width: 50px;
+}
+.formulario:hover{
+    opacity: 0.5;
+}
+.formulario:active{
+    opacity: 1;
+}
