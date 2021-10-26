@@ -20,7 +20,7 @@ head p{
 }
 .head{
     
-    width: 600px;
+    width: 900px;
     margin: 0 auto;
 }
 .head a{
@@ -30,10 +30,15 @@ head p{
 #titulo1{
     display: inline;
     margin-left: 30px;
-    margin-right: 32px;
+    margin-right: 20px;
     color: #5684AE;
 }
 #titulo2{
+    display: inline;
+    color: #5684AE;
+    margin-right: 30px;
+}
+#titulo3{
     display: inline;
     color: #5684AE;
 }
@@ -47,6 +52,12 @@ opacity: 1;
     opacity: 0.5;
 }
 #titulo2:active{
+    opacity: 1;
+}
+#titulo3:hover{
+    opacity: 0.5;
+}
+#titulo3:active{
     opacity: 1;
 }
 main{
@@ -63,7 +74,17 @@ section p{
     margin-bottom: 12px;
     color: #5684AE;
 }
-
+.container img {
+    max-width: 500%;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  .container:active img {
+    -moz-transform: scale(1.8);
+    -webkit-transform: scale(1.8);
+    transform: scale(1.8);
+  }
 #mapa-conceitual{
     display: inline;
    
@@ -82,18 +103,16 @@ section p{
 #mapa-completo{
     position: absolute;
     width: 400px;
-    top: 276px;
+    top: 326px;
     left: 720px;
 }
 #controles{
     position: absolute;
     width: 400px;
-    top: 576px;
-    border: 2px solid black;
+    top: 616px;
     left: 720px;
 }
 #tela-inicial{
-    border: 2px solid black;
     width: 400px;
     top: 676px;
     left: 720px;
@@ -103,7 +122,7 @@ section p{
 .descricao-controles{
     position: absolute;
     width: 200px;
-    top: 636px;
+    top: 686px;
     left: 1127px;
     color: #5684AE;
 }
