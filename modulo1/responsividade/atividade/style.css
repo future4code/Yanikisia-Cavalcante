@@ -75,7 +75,7 @@ footer{
         grid-template-columns: 1fr;
 }
 }
-@media screen and (min-device-wdth:800px) and (max-device-width : 1440px){
+@media screen and (min-device-width:801px) and (max-device-width : 1199px){
 main{
     display: grid;
     grid-template-columns: repeat(4,1fr);
@@ -83,7 +83,11 @@ main{
     column-gap: 10px;
     margin: 20px;
     justify-content: center;
- 
+    /* align-items:flex-start; */
+    grid-template-rows: 0.5fr 0.5fr 1fr;
 }
+/* main{
+    grid-template-columns: 1fr;
+} */
 
 }
