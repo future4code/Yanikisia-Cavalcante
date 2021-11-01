@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'The Hound';
+}
+header{
+    width: 94vw;
+    font-size: 30px;
+    padding: 50px;
+   background-color: #ece9e9;
+}
+head p{
+    position:absolute;
+    display: inline;
+    font-size: 40px;
+    width: 500px;
+    margin-left: 400px;
+    top: 20px;
+   
+}
+.head{
+    
+    width: 980px;
+    margin: 0 auto;
+}
+.head a{
+    background-color: #ece9e9;
+    color: #ece9e9;
+}
+#titulo1{
+    display: inline;
+    margin-left: 30px;
+    margin-right: 32px;
+    color: #5684AE;
+}
+#titulo2{
+    display: inline;
+    color: #5684AE;
+    margin-right: 32px;
+}
+#titulo1:active{
+opacity: 1;
+}
+#titulo1:hover{
+    opacity: 0.5;
+}
+#titulo2:hover{
+    opacity: 0.5;
+}
+#titulo2:active{
+    opacity: 1;
+}
+#projetos{
+    padding-bottom: 30px;
+}
+main{
+    padding-top: 10px;
+    background-color: #f5f5f5;
+}
+section{
+    
+    display: inline;
+   
+}
+section p{
+    font-size: 40px;
+    margin-bottom: 12px;
+    color: #5684AE;
+}
+
+  .container img {
+    max-width: 500%;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  .container:hover img {
+    -moz-transform: scale(1.8);
+    -webkit-transform: scale(1.8);
+    transform: scale(1.8);
+  }
+#home{
+    display: inline;
+   
+    width: 400px;
+}
+#home img{
+    width: 200px;
+}
+.descricao-home{
+    position: absolute;
+    top: 420px;
+    width: 300px;
+    right: 640px;
+    color: #5684AE;
+}
+#funcionarios{
+    position: absolute;
+    width: 400px;
+    top: 340px;
+    left: 720px;
+}
+#formulario{
+    position: absolute;
+    width: 400px;
+    top: 556px;
+    
+    left: 720px;
+}
+#estoque{
+   
+    width: 400px;
+    
+    left: 720px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.descricao-formulario{
+    position: absolute;
+    width: 200px;
+    top: 636px;
+    left: 1127px;
+    color: #5684AE;
+}
+.discricao-funcionarios{
+    position: absolute;
+    width: 200px;
+    top: 416px;
+    left: 1125px;
+    color: #5684AE;
+}
+.descricao-estoque{
+    position: absolute;
+    width: 200px;
+    top: 666px;
+    left: 425px;
+    color: #5684AE;
+}
+ span{
+    font-size: 20px;
+
+    
+}
+footer{
+    position: relative;
+    bottom: 0;
+    background-color: #505050;
+    width: 100vw;
+}
+.titulo-contatos p{
+    font-size: 45px;
+    color: rgb(212, 209, 209);
+}
+.discricao-contatos p{
+    font-size: 24px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: rgb(212, 209, 209);
+}
+.foot{
+    width: 250px;
+ margin: 0 auto;
+ margin-top: 20px; 
+}
+
+p{
+    font-size: 60px;
+    text-align: center;
+}
+.email{
+    display: inline;
+    right:600px;
+    margin-right: 20px;
+}
+.email a{
+   text-decoration: none;
+  
+   background-color: #505050;
+}
+.email img{
+    width: 50px;
+   
+} 
+.email:hover{
+    opacity: 0.5;
+}
+.email:active{
+    opacity: 1;
+}
+.github{
+    display: inline;
+    margin-right: 20px;
+}
+.github a{
+    background-color: #505050;
+}
+.github img{
+    width: 50px;
+}
+.github:hover{
+    opacity: 0.5;
+}
+.github:active{
+    opacity: 1;
+}
+.formulario{
+    display: inline;
+    right:600px;
+    margin-right: 20px;
+}
+.formulario a{
+    background-color: #505050;
+}
+.formulario img{
+    width: 50px;
+}
+.formulario:hover{
+    opacity: 0.5;
+}
+.formulario:active{
+    opacity: 1;
+}
