@@ -1,0 +1,256 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'The Hound';
+}
+
+body{
+   
+}
+header{
+    font-style: 'The Hound';
+    padding: 100px;
+    background-color: #ece9e9;
+    width: 85.4vw;
+   
+}
+header>div>p{
+    display: inline;
+    text-align: start;
+    font-size: 60px;
+    color: #5684AE;
+  
+}
+.informacoes{
+    display: inline;
+   margin-left: 300px;
+ 
+   
+}
+.redirecionados-projetos{
+    left: 100px;
+    right: 10px;
+    font-size: 30px;
+    display: inline;
+    margin-left: 20px;
+    color:#5684AE;
+}
+.informacoes a{
+    background-color: #ece9e9;
+    color: #ece9e9;
+   
+}
+.redirecionados-projetos:hover{
+    opacity: 0.5;
+}
+.redirecionados-projetos:active{
+    opacity: 1;
+}
+.redirecionados-contatos{
+    left: 100px;
+    right: 10px;
+    font-size: 30px;
+    display: inline;
+    margin-left: 20px;
+    
+    color:#5684AE;
+}
+.redirecionados-contatos:hover{
+    opacity: 0.5;
+}
+.redirecionados-contatos:active{
+    opacity: 1;
+}
+main{
+    
+}
+.parte1{
+    background-color:#ece9e9;
+    width: 100vw; 
+    color: #31668A;
+}
+#discricao-titulo{
+    font-size: 30px;
+    margin-bottom: 20px;
+    display: inline;
+    margin-left: 100px;
+}
+
+.discricao>p{
+    font-size: 20px;
+    margin-left: 85px;
+    width: 200px;
+    
+}
+.discricao-qualidades{
+    position: absolute;
+    width: 200px;
+    top: 280px;
+    left: 500px;
+    
+}
+.discricao-qualidades p{
+    font-size:30px;
+    margin-bottom: 8px;
+}
+ul li {
+    list-style-type: circle ;
+    margin-bottom: 20px;
+    font-size: 20px;
+    margin-left: 25px;
+}
+.discricao-destaques{
+    position: absolute;
+    width: 200px;
+    top: 230px;
+    left: 900px;
+    margin-top: 20px;
+}
+.parte2{
+    background-color: #f5f5f5;
+    width: 30vh;
+    width: 100vw; 
+}
+.ensino p{
+    display:inline;   
+}
+#meta{
+    margin-left: 230px;
+    margin-right: 400px;
+    
+}
+#meta:hover{
+    opacity: 0.5;
+}
+#meta:active{
+    opacity: 1;
+}
+#discricao{
+    display: inline;
+    font-size: 20px;
+    
+    margin-left: 40px;
+}
+#labenu{
+    margin-bottom: 85px;
+   
+}
+#labenu:hover{
+    opacity: 0.5;
+}
+#labenu:active{
+    opacity: 1;
+}
+img{   
+    width: 200px; 
+}
+#ensino-discricao{
+    width: 500px;
+    margin-left: 80px;
+    text-align:unset;
+    margin-top: 0px;
+    padding-bottom: 30px;
+}
+#discricao-meta{
+    display: inline;
+    font-size: 25px;
+    color: #5A86AD;
+   
+}
+#discricao-labenu{
+    color: #5A86AD;
+    position:absolute;
+    display: inline;
+    font-size: 25px;
+    top: 680px ;
+    width: 600px;
+    left: 700px;
+ 
+}
+#discricao-labenu p{
+    font-size: 25px;
+    text-align: unset;
+}
+a{
+    background-color: #f5f5f5;
+    color: #f5f5f5;
+}
+footer{
+    position: relative;
+    bottom: 1px;
+    background-color: #505050;
+    width: 100vw;
+}
+.titulo-contatos p{
+    font-size: 45px;
+    color: rgb(212, 209, 209);
+}
+.discricao-contatos p{
+    font-size: 24px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: rgb(212, 209, 209);
+}
+.foot{
+    width: 250px;
+ margin: 0 auto;
+ margin-top: 20px; 
+}
+
+p{
+    font-size: 60px;
+    text-align: center;
+}
+.email{
+    display: inline;
+    right:600px;
+    margin-right: 20px;
+}
+.email a{
+   text-decoration: none;
+  
+   background-color: #505050;
+}
+.email img{
+    width: 50px;
+   
+} 
+.email:hover{
+    opacity: 0.5;
+}
+.email:active{
+    opacity: 1;
+}
+.github{
+    display: inline;
+    margin-right: 20px;
+}
+.github a{
+    background-color: #505050;
+}
+.github img{
+    width: 50px;
+}
+.github:hover{
+    opacity: 0.5;
+}
+.github:active{
+    opacity: 1;
+}
+.formulario{
+    display: inline;
+    right:600px;
+    margin-right: 20px;
+}
+.formulario a{
+    background-color: #505050;
+}
+.formulario img{
+    width: 50px;
+}
+.formulario:hover{
+    opacity: 0.5;
+}
+.formulario:active{
+    opacity: 1;
+}
