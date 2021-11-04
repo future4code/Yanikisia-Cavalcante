@@ -6,13 +6,8 @@ import {CardPequeno} from './components/CardPequeno/CardPequeno';
 import styled from 'styled-components'
 import { createGlobalStyle } from 'styled-components';
 
-// const StyleGlobal= styled.div `
-//   padding: 0;
-//   margin: 0;
-//   box-sizing: border-box;
-// `
 const GlobalStyle = createGlobalStyle`
-  body {
+  *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
