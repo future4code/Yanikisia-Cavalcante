@@ -7,6 +7,10 @@ import iconeCoracaoBranco from '../../img/favorite-white.svg'
 import iconeCoracaoPreto from '../../img/favorite.svg'
 import iconeComentario from '../../img/comment_icon.svg'
 import {SecaoComentario} from '../SecaoComentario/SecaoComentario'
+import {SecaoCompartilha} from '../SecaoCompartilha/SecaoCompartilha'
+import iconeSalvar from "../../img/bookmark_border_black_24dp.svg"
+import iconeSalvo from "../../img/bookmark_black_24dp.svg"
+import iconeCompartilhar from "../../img/send_black_24dp.svg"
 
 const PostContainer = styled.div`
   border: 1px solid gray;
@@ -45,7 +49,9 @@ class Post extends React.Component {
     curtido: false,
     numeroCurtidas: 0,
     comentando: false,
-    numeroComentarios: 0
+    numeroComentarios: 0,
+    salvar: false,
+    compartilhar:false
   }
 
   onClickCurtida = () => {
@@ -58,11 +64,23 @@ class Post extends React.Component {
       })
     }
   }
+  onClickSalvar = () => {
+    this.setState({
+      salvar: !this.state.salvar
+    })
+  
+  }
 
   onClickComentario = () => {
 
     this.setState({
       comentando: !this.state.comentando
+    })
+  }
+  onClickCompartilhar = () => {
+
+    this.setState({
+      compartilhar: !this.state.comentando
     })
   }
 
@@ -72,20 +90,36 @@ class Post extends React.Component {
       numeroComentarios: this.state.numeroComentarios + 1
     })
   }
+  aoCompartilhar = () => {
+    this.setState({
+      compartilhar: false
+    })
+  }
 
   render() {
     let iconeCurtida
-
+    let iconeDeSalvar
     if(this.state.curtido) {
       iconeCurtida = iconeCoracaoPreto
     } else {
       iconeCurtida = iconeCoracaoBranco
     }
+   
+    if (this.state.salvar){
+      iconeDeSalvar=iconeSalvo
+    } else{
+      iconeDeSalvar=iconeSalvar
+    }
+
 
     let componenteComentario
-
+    let componenteCompartilhar
     if(this.state.comentando) {
       componenteComentario = <SecaoComentario aoEnviar={this.aoEnviarComentario}/>
+    }
+    if(this.state.compartilhar){
+      componenteCompartilhar=<SecaoCompartilha aoEnviar={this.aoCompartilhar}/>
+  
     }
 
     return <PostContainer>
@@ -107,9 +141,14 @@ class Post extends React.Component {
           icone={iconeComentario}
           onClickIcone={this.onClickComentario}
           valorContador={this.state.numeroComentarios}
+         
         />
+       <img onClick={this.onClickSalvar} src={iconeDeSalvar} alt={'Imagem de salvar'}/>
+       <img onClick={this.onClickCompartilhar} src={iconeCompartilhar} alt={'Imagem de compartilhar'} />
       </PostFooter>
       {componenteComentario}
+      {/* {componenteCompartilhar,iconeCompartilhamento='https://brasscom.org.br/wp-content/uploads/2019/09/Icone-facebook-1.png'}
+           */}
     </PostContainer>
   }
 }

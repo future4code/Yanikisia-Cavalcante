@@ -69,7 +69,6 @@ class App extends React.Component {
         />
       )
     })
-    console.log(componentes.nomeUsuario)
     return (
      <MainContainer>
        {componentes}
