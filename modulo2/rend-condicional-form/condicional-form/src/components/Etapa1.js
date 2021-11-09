@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import PerguntasAbertas from "../components/PerguntasOpcao/PerguntasAbertas"
+import PerguntasFechadas from "../components/PerguntasOpcao/PerguntasFechadas"
 
 const Container=styled.div ` 
   display: flex;
@@ -28,23 +30,27 @@ class Etapa1 extends React.Component {
     return (
       <Container>
         <h1>Etapa 1-Dados Gerais</h1>
-        <Lista><p>1.Qual seu nome?</p>
-        <input value={this.state.valorInputPessoa}/>
+        <Lista>
+            <PerguntasAbertas perguntas={"1.Qual seu nome?"} />
         </Lista>
-        <Lista><p>1.Qual sua idade?</p>
-        <input value={this.state.valorInputIdade}/>
+        <Lista>
+            <PerguntasAbertas perguntas={"2.Qual sua idade?"} />
         </Lista>
-        <Lista><p>1.Qual seu email?</p>
-        <input value={this.state.valorInputEmail}/>
+        <Lista>
+            <PerguntasAbertas perguntas={"3.Qual seu email?"} />
         </Lista>
-        <Lista><p>1.Qual seu escolaridade?</p>
-        <select>
-        <option value="Ensino médio incompleto"> Ensino médio incompleto</option>
-        <option value="Ensino médio completo"> Ensino médio completo</option>
-        <option value="Ensino superior incompleto"> Ensino superior incompleto</option>
-        <option value="Ensino superior completo"> Ensino superior Completo</option>
-       
-        </select>
+
+        <Lista>
+        <PerguntasFechadas
+          selecao={this.props.selecao}
+          pergunta={"4. Qual a sua escolaridade?"}
+          opcoes={[
+            "Ensino médio incompleto",
+            "Ensino médio completo",
+            "Ensino superior incompleto",
+            "Ensino superior completo"
+          ]}
+        />
         </Lista>
      
       </Container>

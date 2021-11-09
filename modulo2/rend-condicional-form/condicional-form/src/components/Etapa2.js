@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import PerguntasAbertas from "../components/PerguntasOpcao/PerguntasAbertas"
+
 const Container=styled.div ` 
   display: flex;
     flex-direction: column;
@@ -27,13 +29,12 @@ class Etapa2 extends React.Component {
     return (
       <Container>
         <h3>Etapa 2- INFORMAÇÕES DO ENSINO SUPERIOR</h3>
-        <Lista><p>5 .Qual seu curso?</p>
-        <input value={this.state.valorInputPessoa}/>
+        <Lista>
+            <PerguntasAbertas perguntas={"5. Qual seu curso?"} />
         </Lista>
-        <Lista><p>6.Qual a unidade de ensino??</p>
-        <input value={this.state.valorInputIdade}/>
+        <Lista>
+            <PerguntasAbertas perguntas={"6. Qual unidade de ensino?"} />
         </Lista>
-    
       </Container>
     );
   }

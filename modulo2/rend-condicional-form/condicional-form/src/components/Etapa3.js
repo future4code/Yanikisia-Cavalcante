@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-
+import PerguntasAbertas from "../components/PerguntasOpcao/PerguntasAbertas"
+import PerguntasFechadas from "../components/PerguntasOpcao/PerguntasFechadas"
 const Container=styled.div ` 
 *{
     margin:0;
@@ -23,9 +24,7 @@ const Lista= styled.div `
 
 
 `
-const  PEstilizado= styled.p`
-margin-bottom:16px ;
-`
+
 
 class Etapa3 extends React.Component {
     state={
@@ -39,15 +38,17 @@ class Etapa3 extends React.Component {
       <Container>
         <h3>Etapa 3- INFORMAÇÕES GERAIS DE ENSINO</h3>
         <Lista>
-        <PEstilizado>5 .Por que você não terminou um curso de graduação?</PEstilizado>
-        <input value={this.state.valorInputPessoa}/>
+            <PerguntasAbertas perguntas={"5 .Por que você não terminou um curso de graduação?"} />
         </Lista>
-        <Lista><PEstilizado>6.Qual a unidade de ensino??</PEstilizado>
-      <select>
-      <option value="Nenhum">Nenhum</option>
-      <option value="Curso Técnico">Curso Técnico</option>
-      <option value="Curso de inglês">Curso de inglês</option>
-      </select>
+        <Lista>
+        <PerguntasFechadas
+          pergunta={"6.Qual a unidade de ensino?"}
+          opcoes={[
+            "Nenhum",
+            "Curso Técnico",
+            "Curso de Ingês"
+          ]}
+        />
         </Lista>
      
       </Container>
