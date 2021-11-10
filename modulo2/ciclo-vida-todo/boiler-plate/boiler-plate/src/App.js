@@ -10,6 +10,8 @@ const TarefaList = styled.ul`
 const Tarefa = styled.li`
   text-align: left;
   text-decoration: ${({ completa }) => (completa ? 'line-through' : 'none')};
+  margin-bottom: 12px;
+
 `
 
 const InputsContainer = styled.div`
@@ -17,6 +19,13 @@ const InputsContainer = styled.div`
   grid-auto-flow: column;
   gap: 10px;
 `
+const Div=styled.div ` 
+ display: flex;
+justify-content: space-evenly;
+align-items: flex-start;
+
+margin-bottom: 12px;
+ `
 
 class App extends React.Component {
   state = {
@@ -32,17 +41,15 @@ class App extends React.Component {
     inputValue: ''
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    if (prevState.tarefas === this.state.tarefas) {
+  componentDidUpdate() {
       localStorage.setItem("tarefas", JSON.stringify(this.state.tarefas))
-    }
   }
 
   componentDidMount() {
     const tarefasString = localStorage.getItem("tarefas")
     const tarefasParse = JSON.parse(tarefasString)
 
-    this.setState({ tarefas: tarefasParse })
+    this.setState({ tarefas: tarefasParse || "" })
   };
 
   onChangeInput = (event) => {
@@ -73,6 +80,14 @@ class App extends React.Component {
 
   onChangeFilter = (event) => {
       this.setState({filtro: event.target.value})
+  }
+
+  deletarTarefa=(idTarefa)=>{
+      const tarefa = this.state.tarefas.filter((tarefa) => {
+      return tarefa.id !== idTarefa
+    });
+    
+    this.setState({ tarefas: tarefa })
   }
 
   render() {
@@ -107,14 +122,22 @@ class App extends React.Component {
         <TarefaList>
           {listaFiltrada.map(tarefa => {
             return (
+              <Div>
               <Tarefa
                 completa={tarefa.completa}
                 onClick={() => this.selectTarefa(tarefa.id)}
+                
               >
                 {tarefa.texto}
               </Tarefa>
+              <button onClick={() =>this.deletarTarefa(tarefa.id)}>x</button>
+              </Div>
             )
-          })}
+            
+          }
+          
+          )}
+          
         </TarefaList>
       </div>
     )
