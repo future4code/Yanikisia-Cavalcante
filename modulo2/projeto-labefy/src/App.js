@@ -36,9 +36,7 @@ background: linear-gradient(-180deg, rgb(147, 204, 255), rgb(0, 0, 0));
 handleChangePage=()=>{
    this.setState({page: !this.state.page})
  }
- componentDidMount(){
-   
- }
+
 
   render(){
     let paginas=this.state.page? <CreatePlaylist />:  <ListaPlaylist />
