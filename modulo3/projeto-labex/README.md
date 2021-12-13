@@ -5,7 +5,7 @@
 - react-icons 
 - react js
 - API labex
--react-routers
+- react-routers
 
 
 ***Página que simula um web site de viagens com duas partes. Uma pública, onde você pode ver as viagens disponiveis, se candidatar para a viagem da sua escolha, outra privada, onde apenas pessoas cadastradas podem entrar, nesta o administradr pode ver as viagens já existentes, pode excluir-las, pode criar novas viagens e pode ver os detalhes de um viagem especifica, nesses detalhes pode se ver as informações sobre a viagem, e os candidatos aprovados ou os que aguardam aprovção.***
