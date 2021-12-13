@@ -6,6 +6,7 @@ import DeleteIcon from "../images/delete.svg"
 import axios from "axios";
 import { baseURL } from "../Hooks/Data";
 import { useHistory } from "react-router";
+import LogoIcon from "../images/logo.svg"
 const StyledHeader = styled.header` 
     width:100%;
     height: 10vh;
@@ -16,19 +17,15 @@ const StyledHeader = styled.header`
     align-items: center;
     justify-items: center;
     p{
+        font-size: 2em;
+        font-weight: 700;
+        color: #fff3c3;
+        margin:0;
         justify-self: flex-start;
     }
-    button{
-        margin-bottom: 15px;
-        height: 20px;
-        padding: 0px 20px;
-        border-radius: 20px;
-        border: none;
-        color: white;
-        font-size: 16px;
-        background-color: slategray;
-        min-width: 100px;
-     }
+    img{
+        width: 80px;
+    }
 `
 const MainContainer = styled.section` 
     display: flex;
@@ -38,9 +35,10 @@ const MainContainer = styled.section`
     justify-content: flex-start;
     align-items: center;
     h1{
-        padding: 0px;
-        margin-bottom: 10px;
         font-size: 2em;
+        font-weight: 700;
+        color: #FA7C30;
+        
     }
     form{
         display: flex;
@@ -58,18 +56,12 @@ const MainContainer = styled.section`
         margin: 0px 0px 15px;
      }
     }
-    button{
-        margin-bottom: 15px;
-        height: 40px;
-        padding: 0px 20px;
-        border-radius: 20px;
-        border: none;
-        color: white;
-        font-size: 16px;
-        background-color: slategray;
-        min-width: 100px;
-     }
-    
+`
+const DivBoss=styled.div` 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
 `
 const CardStuled = styled.div`
     display: flex;
@@ -80,6 +72,7 @@ const CardStuled = styled.div`
     border-radius: 4px;
     margin: 8px;
     width: 80%;
+    margin-bottom: 10px;
     p{
         margin:1%
     }
@@ -95,14 +88,62 @@ const CardStuled = styled.div`
         }
     }
 `
+const StyledButton = styled.button`
+  border-color: #fa7c30;
+  padding: 0.2em 1em;
+  cursor: pointer;
+  font-size: 1em;
+  color: #ffffff;
+  border-radius: 10px;
+  background-image: linear-gradient(45deg, #fa7c30 50%, #000000 50%);
+  background-position: 25%;
+  background-size: 400%;
+  -webkit-transition: background 500ms ease-in-out, color 500ms ease-in-out;
+  transition: background 500ms ease-in-out, color 500ms ease-in-out;
+ 
+  :hover{
+    color: #ffffff;
+  background-position: 100%;
+  }
+  `
+const StyledButtonMainContainer = styled.button`
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    width: 150px;
+    height: 25px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    color: #f05924;
+    background: #fdc09c;
+    margin-bottom: 10px;
+    border: 1px solid #fa7c30;
+    border-radius: 10px;
+    box-shadow: 3px 3px 0 #fa7c30,
+     -3px -3px 0 #fa7c30,
+     -3px 3px 0 #fa7c30,
+     3px -3px 0 #fa7c30;
+    transition: 500ms ease-in-out;
+    :hover {
+     box-shadow: 20px 5px 0 #f7921e, -20px -5px 0 #f7921e;
+    }
+
+    :focus {
+    outline: none;
+    }
+
+`
 
 export default function AdminHomePage() {
     useProtectedPage()
     const history=useHistory()
-    let trips = useRequestData("/trips")
-    console.log("aaaaa",trips)
-    const [idToSend,setIdToSend]=useState("")
-    console.log("viagem", trips[0])
+    let trips = useRequestData("https://us-central1-labenu-apis.cloudfunctions.net/labeX/yanikisia-carver/trips")
+    let [update,setUpdate]=useState(false)
 
     const deleteTrips = (id, name) => {
         const token = localStorage.getItem("token");
@@ -125,7 +166,7 @@ export default function AdminHomePage() {
     }
 
     const goToDetais=(id)=>{
-        console.log(id)
+       
         history.push(`/tripDetais/${id}`)
     
     }
@@ -135,8 +176,17 @@ export default function AdminHomePage() {
     }
     const cleanStorage = () => {
         localStorage.clear()
+        if(localStorage.length>0){
+           
+        }
+        else{
+    
+            setUpdate(!useState)
+        }
     }
 
+
+    
 
     const listedTrips = trips[0] && trips[0].map((trip) => {
         return (
@@ -153,15 +203,17 @@ export default function AdminHomePage() {
     return (
         <section>
             <StyledHeader>
-                <button onClick={goBack}>Voltar</button>
-                <img />
+                <StyledButton onClick={goBack}>Voltar</StyledButton>
+                <img src={LogoIcon} />
                 <p>GoodTrip</p>
-                <button>Longout</button>
+                <StyledButton onClick={cleanStorage}>Longout</StyledButton>
             </StyledHeader>
             <MainContainer>
-                <h1>escolha uma viagem</h1>
-                <button>Criar viagem</button>
+                <h1>Escolha uma viagem</h1>
+                <StyledButtonMainContainer onClick={goToCrateTrip}>Criar viagem</StyledButtonMainContainer>
+                <DivBoss>
                 {listedTrips}
+                </DivBoss>
             </MainContainer>
         </section>
     )

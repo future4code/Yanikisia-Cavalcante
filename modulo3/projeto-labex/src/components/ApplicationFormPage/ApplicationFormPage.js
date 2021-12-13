@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { useHistory } from "react-router";
 import useForm from "../Hooks/useForm";
 import { useRequestData } from "../Hooks/useRequestData";
+import axios from "axios";
+import LogoIcon from "../images/logo.svg"
 const StyledHeader = styled.header` 
     width:100%;
     height: 10vh;
@@ -13,7 +15,14 @@ const StyledHeader = styled.header`
     align-items: center;
     justify-items: center;
     p{
+        font-size: 2em;
+        font-weight: 700;
+        color: #fff3c3;
+        margin:0;
         justify-self: flex-start;
+    }
+    img{
+        width: 80px;
     }
 `
 const MainContainer = styled.section` 
@@ -24,7 +33,8 @@ const MainContainer = styled.section`
     justify-content: center;
     align-items: center;
     h1{
-
+        font-weight: 700;
+        color: #FA7C30;
         margin-bottom: 10px;
         font-size: 2em;
     }
@@ -52,11 +62,60 @@ const MainContainer = styled.section`
     }
     }
 `
+const StyledButton = styled.button`
+  border-color: #fa7c30;
+  padding: 0.2em 1em;
+  cursor: pointer;
+  font-size: 1em;
+  color: #ffffff;
+  border-radius: 10px;
+  background-image: linear-gradient(45deg, #fa7c30 50%, #000000 50%);
+  background-position: 25%;
+  background-size: 400%;
+  -webkit-transition: background 500ms ease-in-out, color 500ms ease-in-out;
+  transition: background 500ms ease-in-out, color 500ms ease-in-out;
+ 
+  :hover{
+    color: #ffffff;
+  background-position: 100%;
+  }
+  `
+const StyledButtonMainContainer = styled.button`
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  width: 150px;
+  height: 25px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  color: #f05924;
+  background: #fdc09c;
+  margin-bottom: 10px;
+  border: 1px solid #fa7c30;
+  border-radius: 10px;
+  box-shadow: 3px 3px 0 #fa7c30,
+   -3px -3px 0 #fa7c30,
+   -3px 3px 0 #fa7c30,
+   3px -3px 0 #fa7c30;
+  transition: 500ms ease-in-out;
+  :hover {
+   box-shadow: 20px 5px 0 #f7921e, -20px -5px 0 #f7921e;
+  }
+
+  :focus {
+  outline: none;
+  }
+
+`
 export default function ApplicationFormPage() {
     const history=useHistory()
-    const trips=useRequestData("/trips")
+    const trips=useRequestData("https://us-central1-labenu-apis.cloudfunctions.net/labeX/yanikisia-carver/trips")
     const [tripId,setTripId]=useState("")
-    console.log(trips[0])
     const {form, onChange, cleanFields}=useForm({
         name:"",
         age:"",
@@ -74,20 +133,29 @@ export default function ApplicationFormPage() {
 
     const sendForm=(e)=>{
         e.preventDefault()
-        console.log(form)
-        cleanFields()
-        setTripId('')
+        axios.post(`https://us-central1-labenu-apis.cloudfunctions.net/labeX/yanikisia-carver/trips/${tripId}/apply`
+        ,form
+        ).then((ans)=>{
+            alert("sua inscrição deu certo, parabens!!!")
+            cleanFields()
+            setTripId('')
+        }).catch((err)=>{
+            alert("algum de errado aconteceu, perdão, tente mais tarde")
+            console.log(err)
+        })
+      
+
     }
     const listedOptions= trips[0] && trips[0].map((trip)=>{
-       console.log(trip.name)
-      return <option value={trip.id}>{trip.name}</option>
+  
+      return( <option value={trip.id}>{trip.name}</option>)
     })
-    console.log(tripId)
+
     return (
         <section>
             <StyledHeader>
-                <button onClick={goBack}>Voltar</button>
-                <img />
+                <StyledButton onClick={goBack}>Voltar</StyledButton>
+                <img src={LogoIcon} />
                 <p>GoodTrip</p>
             </StyledHeader>
             <MainContainer>
@@ -279,7 +347,7 @@ export default function ApplicationFormPage() {
                         <option value="Zâmbia">Zâmbia</option>
                         <option value="Zimbábue">Zimbábue</option>
                     </select>
-                    <button type="submit">Enviar</button>
+                    <StyledButtonMainContainer type="submit">Enviar</StyledButtonMainContainer>
                 </form>
             </MainContainer>
         </section>

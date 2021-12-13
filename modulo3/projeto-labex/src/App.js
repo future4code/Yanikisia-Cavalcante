@@ -1,10 +1,9 @@
 import styled from "styled-components"
 import { Router } from './components/Router/Router';
 const AppContainer=styled.div`  
-*{
-  margin: 0;
+body{
+  margin:0;
   padding: 0;
-
 }
 
  text-align: center;

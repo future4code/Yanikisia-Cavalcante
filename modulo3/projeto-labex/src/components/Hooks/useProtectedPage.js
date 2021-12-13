@@ -9,7 +9,7 @@ import { useHistory } from "react-router-dom";
     const token = localStorage.getItem("token");
 
     if (token === null) {
-      console.log("Não está logado!!!")
+      
       history.push("/login")
   
     }
